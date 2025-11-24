@@ -1,0 +1,136 @@
+/* Global Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Inter', sans-serif; /* Clean, modern font */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #686868; /* Light grey minimalist background */
+    color: #333;
+}
+
+/* Calculator Container */
+.calculator {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05); /* Soft, premium shadow */
+    width: 400px; /* Slightly wider for scientific keys */
+}
+
+/* Display Screen */
+.display {
+    margin-bottom: 25px;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    border: none;
+    color: #2c3e50;
+    font-size: 3rem;
+    text-align: right;
+    padding: 10px;
+    outline: none;
+    font-weight: 300; /* Thin, elegant font weight */
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 Columns */
+    gap: 12px;
+}
+
+/* Base Button Styling */
+.btn {
+    padding: 15px 0; /* Vertical padding only, width handled by grid */
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 16px; /* Soft rounded corners */
+    cursor: pointer;
+    background: #f7f9fc; /* Very light grey for default */
+    color: #555;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background: #eef1f5;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Number Buttons */
+.btn.number {
+    background: #ffffff;
+    color: #2c3e50;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.btn.number:hover {
+    background: #fdfdfd;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* Operator Buttons */
+.btn.operator {
+    background: #e0e5ec;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.btn.operator:hover {
+    background: #d4dbe4;
+}
+
+/* Function Buttons (sin, cos, etc.) */
+.btn.func {
+    background: #f7f9fc;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn.func:hover {
+    background: #eef1f5;
+    color: #2c3e50;
+}
+
+/* Action Buttons (C, DEL) */
+.btn.action {
+    background: #fff0f0;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.btn.action:hover {
+    background: #ffe6e6;
+}
+
+/* Equal Button */
+.btn.equal {
+    grid-column: span 2; /* Spans 2 columns */
+    background: #2c3e50; /* Dark minimalist accent */
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.btn.equal:hover {
+    background: #34495e;
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+}
